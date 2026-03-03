@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dr. Sarmistha | Study Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="darkToggle" class="toggle-btn">🌙</button>
+<canvas id="particles"></canvas>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1 class="main-title heartbeat">
+    Future <span class="name">Dr. Sarmistha</span> 🩺
+    </h1>
+    <p class="subtitle">Passion. Perseverance. Patient care.</p>
+
+    <!-- SUBJECT -->
+    <div class="card">
+        <h2 id="subject">Anatomy 🧠</h2>
+        <button onclick="nextSubject()">Switch Subject</button>
+    </div>
+
+    <!-- TIMER -->
+    <div class="card">
+        <h2>Focus Session</h2>
+        <h1 id="timer" class="timer">25:00</h1>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <!-- STUDY TRACKER -->
+    <div class="card">
+        <h2>Daily Performance</h2>
+
+        <p class="stat">Today: <span id="totalHours">0</span> hrs</p>
+
+        <input type="number" id="studyInput" placeholder="Add hours">
+        <button onclick="addStudyHours()">Add</button>
+        <button onclick="resetStudyHours()">Reset</button>
+
+        <div class="target-section">
+            <p>Daily Target</p>
+            <input type="number" id="targetInput">
+            <button onclick="updateTarget()">Update</button>
+        </div>
+
+        <div class="progress-container">
+            <div id="progressFill" class="progress-fill"></div>
+        </div>
+
+        <p class="progress-text">
+            <span id="progressPercent">0</span>% Completed
+        </p>
+
+        <p class="stat">Weekly: <span id="weeklyTotal">0</span> hrs</p>
+        <p class="streak">🔥 <span id="streakCount">0</span> Day Streak</p>
+	<div id="badge" class="badge hidden">
+    🏅 7-Day Consistency Badge Unlocked!
+</div>
+    </div>
+
+    <div class="card">
+        <button class="motivation-btn" onclick="showMotivation()">Inspire Me</button>
+        <p id="motivation" class="motivation-text"></p>
+    </div>
+    <div class="fun-section">
+    <button onclick="revealCompliment()" class="fun-btn">
+        ✨ Surprise
+    </button>
+
+    <p id="compliment" class="compliment hidden">
+    <span id="heart" class="heart">❤️</span>
+    <span id="complimentText"></span>
+</p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
